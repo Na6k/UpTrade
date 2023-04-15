@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block 'menu' %}
+
+    {% comment "" %}<ul>
+        {% for item in items %}
+        <li><a href="{{item.name}}">{{item.name}}</a></li>
+            {% if item.parent %}
+                {% for item in item.parent %}
+                <li><a href="{{item.name}}">{{item.name}}</a></li>
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    </ul>{% endcomment %}
+    
+{% endblock 'menu' %}
